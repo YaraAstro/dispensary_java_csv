@@ -31,6 +31,10 @@ patient_id,patient_name,patient_birthday,patient_address,patient_NIC,patient_con
 
 ### doctors.csv
 
+```csv
+doctor_id,doctor_name,doctor_birthday,doctor_address,doctor_contact_no,doctor_qualification,doctor_specialization,doctor_recruited_date
+```
+
 ### appointments.csv
 
 ### prescriptions.csv
