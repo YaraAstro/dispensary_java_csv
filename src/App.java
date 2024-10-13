@@ -22,8 +22,13 @@ public class App {
 
     // load medicines from csv file
     private static void loadMedicines(String file_path) {
-        medicines = (ArrayList<Medicine>) Medicine.loadMedicines(file_path);
-        System.out.println(medicines == null ? "Failed to load medicines" : "Medicines loaded successfully");
+        try {
+            medicines = (ArrayList<Medicine>) Medicine.loadMedicines(file_path);
+            System.out.println(medicines == null ? "Failed to load medicines" : "Medicines loaded successfully");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error loading medicines: " + e.getMessage());
+            System.out.println("Please check the format of the medicines CSV file.");
+        }
     }
 
     // load payments from csv file
@@ -34,8 +39,14 @@ public class App {
 
     // load prescriptions from csv file
     private static void loadPrescriptions(String file_path) {
-        prescriptions = (ArrayList<Prescription>) Prescription.loadPrescriptions(file_path);
-        System.out.println(prescriptions == null ? "Failed to load prescriptions" : "Prescriptions loaded successfully");
+        try {
+            prescriptions = (ArrayList<Prescription>) Prescription.loadPrescriptions(file_path);
+            System.out.println(prescriptions == null ? "Failed to load prescriptions" : "Prescriptions loaded successfully");
+        } catch (NumberFormatException e) {
+            System.out.println("Error loading prescriptions: " + e.getMessage());
+            System.out.println("Please check the format of the prescriptions CSV file, especially the numeric fields.");
+            System.out.println("Ensure that all numeric fields are properly formatted and do not contain any non-numeric characters.");
+        }
     }
 
     public static void main(String[] args) throws Exception {

@@ -119,7 +119,7 @@ public class Patient {
             String line;
             br.readLine(); // Skip header line
             while ((line = br.readLine()) != null) {
-                String[] data = line.split(",");
+                String[] data = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
                 Patient patient = new Patient(
                     data[0],
                     data[1],
@@ -135,7 +135,7 @@ public class Patient {
                 );
                 patients.add(patient);
             }
-        } catch (IOException e) {
+        } catch (IOException | NumberFormatException e) {
             e.printStackTrace();
             return null;
         }

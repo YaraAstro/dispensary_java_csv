@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -98,20 +99,20 @@ public class Doctor {
             String line;
             br.readLine(); // Skip header line
             while ((line = br.readLine()) != null) {
-                String[] data = line.split(",");
+                String[] data = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
                 Doctor doctor = new Doctor(
                     data[0],
                     data[1],
-                    LocalDate.parse(data[2]),
+                    LocalDate.parse(data[2].replace("\"", "")),
                     data[3].replace("\"", ""),
                     data[4].replace("\"", ""),
                     data[5].replace("\"", ""),
                     data[6].replace("\"", ""),
-                    LocalDate.parse(data[7])
+                    LocalDate.parse(data[7].replace("\"", ""))
                 );
                 doctors.add(doctor);
             }
-        } catch (IOException e) {
+        } catch (IOException | DateTimeParseException e) {
             e.printStackTrace();
             return null;
         }

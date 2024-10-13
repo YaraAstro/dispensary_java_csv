@@ -124,12 +124,25 @@ public class Prescription {
             String line;
             br.readLine(); // Skip header line
             while ((line = br.readLine()) != null) {
-                String[] data = line.split(",");
+                String[] data = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
                 ArrayList<String> medicineIds = new ArrayList<>(Arrays.asList(data[3].substring(1, data[3].length() - 1).split(",")));
                 ArrayList<String> dosages = new ArrayList<>(Arrays.asList(data[4].substring(1, data[4].length() - 1).split(",")));
                 ArrayList<Integer> amounts = new ArrayList<>();
-                for (String amount : data[5].substring(1, data[5].length() - 1).split(",")) {
-                    amounts.add(Integer.parseInt(amount));
+                String[] amountStrings = data[5].substring(1, data[5].length() - 1).split(",");
+                // Ensure to trim and check for empty strings
+                for (String amount : amountStrings) {
+                    amount = amount.trim();
+                    if (!amount.isEmpty()) {
+                        // Check if the amount starts with a bracket and remove it
+                        if (amount.startsWith("[")) {
+                            amount = amount.substring(1);
+                        }
+                        // Check if the amount ends with a bracket and remove it
+                        if (amount.endsWith("]")) {
+                            amount = amount.substring(0, amount.length() - 1);
+                        }
+                        amounts.add(Integer.parseInt(amount));
+                    }
                 }
                 Prescription prescription = new Prescription(
                     data[0], // prescriptionId
@@ -149,7 +162,12 @@ public class Prescription {
         } catch (IOException e) {
             e.printStackTrace();
             return null;
+        } catch (NumberFormatException e) {
+            System.err.println("Error parsing number: " + e.getMessage());
+            e.printStackTrace();
+            return null;
         }
         return prescriptions;
     }
+    
 }
