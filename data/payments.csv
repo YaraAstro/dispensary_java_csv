@@ -1,0 +1,11 @@
+payment_id,appointment_id,amount,payment_date,payment_method,status
+PAY001,APT001,50.00,2023-05-01,Credit Card,Completed
+PAY002,APT002,75.50,2023-05-02,Cash,Completed
+PAY003,APT003,100.00,2023-05-03,Debit Card,Pending
+PAY004,APT004,60.25,2023-05-04,Insurance,Completed
+PAY005,APT005,90.75,2023-05-05,Credit Card,Completed
+PAY006,APT006,120.00,2023-05-06,Cash,Completed
+PAY007,APT007,45.50,2023-05-07,Debit Card,Pending
+PAY008,APT008,80.00,2023-05-08,Insurance,Completed
+PAY009,APT009,110.25,2023-05-09,Credit Card,Completed
+PAY010,APT010,95.00,2023-05-10,Cash,Completed
