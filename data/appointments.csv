@@ -1,0 +1,12 @@
+AP001,PT001,DC001,2023-05-15,09:00,Scheduled,"Fever, Cough","Patient reports high fever and persistent cough for 3 days",
+AP002,PT003,DC002,2023-05-15,10:30,Completed,"Headache, Dizziness","Recurring migraines, sensitivity to light",PR001
+AP003,PT002,DC005,2023-05-16,14:00,Scheduled,"Chest Pain","Intermittent chest pain, shortness of breath",
+AP004,PT005,DC003,2023-05-16,15:30,Cancelled,"Back Pain","Lower back pain, difficulty in movement",
+AP005,PT004,DC004,2023-05-17,11:00,Scheduled,"Sore Throat, Runny Nose","Symptoms of common cold, slight fever",
+AP006,PT006,DC002,2023-05-17,13:30,Scheduled,"Skin Rash","Itchy rash on arms and legs, possible allergic reaction",
+AP007,PT001,DC001,2023-05-18,09:30,Scheduled,"Follow-up","Follow-up for previous fever and cough",
+AP008,PT007,DC006,2023-05-18,16:00,Scheduled,"Joint Pain","Knee joint pain, difficulty in walking",
+AP009,PT008,DC007,2023-05-19,10:00,Scheduled,"Hair Loss","Noticeable hair thinning, concerns about baldness",
+AP010,PT009,DC008,2023-05-19,14:30,Scheduled,"Blurred Vision","Sudden onset of blurred vision in right eye",
+
+

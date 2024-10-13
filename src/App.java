@@ -52,16 +52,7 @@ public class App {
         boolean exit = false;
 
         while (!exit) {
-            System.out.println("\n╔════════════════════════════════════════╗");
-            System.out.println("║     Dispensary Management System       ║");
-            System.out.println("╠════════════════════════════════════════╣");
-            System.out.println("║  1. Patient Management                 ║");
-            System.out.println("║  2. Doctor Management                  ║");
-            System.out.println("║  3. Medicine Management                ║");
-            System.out.println("║  4. Prescription Management            ║");
-            System.out.println("║  5. Payment Management                 ║");
-            System.out.println("║  6. Exit                               ║");
-            System.out.println("╚════════════════════════════════════════╝");
+            System.out.println(getMainMenuString());
             System.out.print("Enter your choice: ");
 
             int choice;
@@ -83,14 +74,14 @@ public class App {
                     medicineManagement();
                     break;
                 case 4:
-                    patientManagement();
+                    prescriptionManagement();
                     break;
                 case 5:
-                    patientManagement();
+                    paymentManagement();
                     break;
                 case 6:
                     exit = true;
-                    System.out.println("Thank you for using the Dispensary Management System. Goodbye!");
+                    System.out.println("Thank you for using the Dispensary Management System. \nGoodbye!");
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
@@ -98,18 +89,107 @@ public class App {
         }
     }
 
+    
     private static void medicineManagement() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'medicineManagement'");
+        System.out.println(getMedicineManagementString());
+        // TODO: Implement medicine management logic
     }
 
     private static void doctorManagement() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'doctorManagement'");
+        System.out.println(getDoctorManagementString());
+        // TODO: Implement doctor management logic
     }
 
     private static void patientManagement() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'patientManagement'");
+        System.out.println(getPatientManagementString());
+        // TODO: Implement patient management logic
+    }
+
+    private static void prescriptionManagement() {
+        System.out.println(getPrescriptionManagementString());
+        // TODO: Implement prescription management logic
+    }
+
+    private static void paymentManagement() {
+        System.out.println(getPaymentManagementString());
+        // TODO: Implement payment management logic
+    }
+    
+    private static String getMainMenuString() {
+        return "\n╔════════════════════════════════════════╗\n" +
+               "║     Dispensary Management System       ║\n" +
+               "╠════════════════════════════════════════╣\n" +
+               "║  1. Patient Management                 ║\n" +
+               "║  2. Doctor Management                  ║\n" +
+               "║  3. Medicine Management                ║\n" +
+               "║  4. Prescription Management            ║\n" +
+               "║  5. Payment Management                 ║\n" +
+               "║  6. Exit                               ║\n" +
+               "╚════════════════════════════════════════╝";
+    }
+    
+    private static String getMedicineManagementString() {
+        return "\n╔════════════════════════════════════════╗\n" +
+               "║        Medicine Management             ║\n" +
+               "╠════════════════════════════════════════╣\n" +
+               "║  1. Add New Medicine                   ║\n" +
+               "║  2. Update Medicine                    ║\n" +
+               "║  3. Delete Medicine                    ║\n" +
+               "║  4. View All Medicines                 ║\n" +
+               "║  5. Search Medicine                    ║\n" +
+               "║  6. Back to Main Menu                  ║\n" +
+               "╚════════════════════════════════════════╝";
+    }
+
+    private static String getDoctorManagementString() {
+        return "\n╔════════════════════════════════════════╗\n" +
+               "║         Doctor Management              ║\n" +
+               "╠════════════════════════════════════════╣\n" +
+               "║  1. Add New Doctor                     ║\n" +
+               "║  2. Update Doctor                      ║\n" +
+               "║  3. Delete Doctor                      ║\n" +
+               "║  4. View All Doctors                   ║\n" +
+               "║  5. Search Doctor                      ║\n" +
+               "║  6. Back to Main Menu                  ║\n" +
+               "╚════════════════════════════════════════╝";
+    }
+
+    private static String getPatientManagementString() {
+        return "\n╔════════════════════════════════════════╗\n" +
+               "║         Patient Management             ║\n" +
+               "╠════════════════════════════════════════╣\n" +
+               "║  1. Add New Patient                    ║\n" +
+               "║  2. Update Patient                     ║\n" +
+               "║  3. Delete Patient                     ║\n" +
+               "║  4. View All Patients                  ║\n" +
+               "║  5. Search Patient                     ║\n" +
+               "║  6. Back to Main Menu                  ║\n" +
+               "╚════════════════════════════════════════╝";
+    }
+
+    private static String getPrescriptionManagementString() {
+        return "\n╔════════════════════════════════════════╗\n" +
+               "║      Prescription Management           ║\n" +
+               "╠════════════════════════════════════════╣\n" +
+               "║  1. Create New Prescription            ║\n" +
+               "║  2. Update Prescription                ║\n" +
+               "║  3. Delete Prescription                ║\n" +
+               "║  4. View All Prescriptions             ║\n" +
+               "║  5. Search Prescription                ║\n" +
+               "║  6. Back to Main Menu                  ║\n" +
+               "╚════════════════════════════════════════╝";
+    }
+
+    private static String getPaymentManagementString() {
+        return "\n╔════════════════════════════════════════╗\n" +
+               "║         Payment Management             ║\n" +
+               "╠════════════════════════════════════════╣\n" +
+               "║  1. Record New Payment                 ║\n" +
+               "║  2. Update Payment                     ║\n" +
+               "║  3. Delete Payment                     ║\n" +
+               "║  4. View All Payments                  ║\n" +
+               "║  5. Search Payment                     ║\n" +
+               "║  6. Back to Main Menu                  ║\n" +
+               "╚════════════════════════════════════════╝";
     }
 }

@@ -37,6 +37,10 @@ doctor_id,doctor_name,doctor_birthday,doctor_address,doctor_contact_no,doctor_qu
 
 ### appointments.csv
 
+```csv
+appointment_id,patient_id,doctor_id,appointment_date,appointment_time,status,symptoms,description,prescription_id
+```
+
 ### prescriptions.csv
 
 ### medicines.csv

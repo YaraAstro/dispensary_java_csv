@@ -18,7 +18,7 @@ public class Patient {
     private String patientDiseases;
     private double patientWeight;
     private double patientHeight;
-    private String csvPath = "data/patients.csv";
+    private static final String CSV_PATH = "data/patients.csv";
 
     // Constructor
     public Patient(String patientId, String patientName, LocalDate patientBirthday, String patientAddress,
@@ -89,14 +89,14 @@ public class Patient {
     }
 
     private void updateCSV() {
-        ArrayList<Patient> patients = loadPatients(csvPath);
+        ArrayList<Patient> patients = loadPatients(CSV_PATH);
         for (int i = 0; i < patients.size(); i++) {
             if (patients.get(i).patientId.equals(this.patientId)) {
                 patients.set(i, this);
                 break;
             }
         }
-        savePatients(patients, csvPath);
+        savePatients(patients, CSV_PATH);
     }
 
     private static void savePatients(ArrayList<Patient> patients, String file_path) {

@@ -15,7 +15,7 @@ public class Doctor {
     private String doctorQualification;
     private String doctorSpecialization;
     private LocalDate doctorRecruitedDate;
-    private String csvPath = "data/doctors.csv";
+    private static final String CSV_PATH = "data/doctors.csv";
 
     // Constructor
     public Doctor(String doctorId, String doctorName, LocalDate doctorBirthday, String doctorAddress,
@@ -68,14 +68,14 @@ public class Doctor {
     }
 
     private void updateCSV() {
-        ArrayList<Doctor> doctors = loadDoctors(csvPath);
+        ArrayList<Doctor> doctors = loadDoctors(CSV_PATH);
         for (int i = 0; i < doctors.size(); i++) {
             if (doctors.get(i).doctorId.equals(this.doctorId)) {
                 doctors.set(i, this);
                 break;
             }
         }
-        saveDoctors(doctors, csvPath);
+        saveDoctors(doctors, CSV_PATH);
     }
 
     private static void saveDoctors(ArrayList<Doctor> doctors, String file_path) {
