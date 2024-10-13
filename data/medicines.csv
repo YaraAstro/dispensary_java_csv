@@ -1,0 +1,12 @@
+medicine_id,name,description,price,stock,manufacturer,expiry_date,unit_price
+MED001,Paracetamol,Pain reliever and fever reducer,5.99,500,PharmaCorp,2024-12-31,0.12
+MED002,Amoxicillin,Antibiotic for bacterial infections,12.50,200,MediLabs,2025-06-30,0.63
+MED003,Ibuprofen,Anti-inflammatory and pain reliever,7.25,400,HealthPharm,2024-09-30,0.18
+MED004,Omeprazole,Proton pump inhibitor for acid reflux,15.75,150,GastroMed,2025-03-31,1.05
+MED005,Loratadine,Antihistamine for allergy relief,9.99,300,AllergyEase,2024-11-30,0.33
+MED006,Metformin,Oral diabetes medication,11.50,250,DiabeteCare,2025-08-31,0.46
+MED007,Simvastatin,Cholesterol-lowering medication,18.25,180,HeartHealth,2025-05-31,1.01
+MED008,Sertraline,Antidepressant (SSRI),22.50,100,MindWell,2024-10-31,2.25
+MED009,Salbutamol,Bronchodilator for asthma relief,14.99,200,RespiCare,2025-02-28,0.75
+MED010,Aspirin,Blood thinner and pain reliever,6.75,600,CardioPharm,2024-07-31,0.11
+
