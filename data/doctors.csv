@@ -1,3 +1,4 @@
+doctor_id,doctor_name,doctor_birthday,doctor_address,doctor_contact_no,doctor_qualification,doctor_specialization,doctor_recruited_date
 DC001,Ron Jeremy,1953-01-01,"123 Main St, Los Angeles, CA","555-0101","PhD","urology","2020-05-15"
 DC002,James Deen,1986-02-07,"456 Elm St, San Francisco, CA","555-0102","MBBS","general","2021-06-20"
 DC003,Peter North,1957-05-11,"789 Oak St, Miami, FL","555-0103","BSc","orthopedics","2019-03-10"

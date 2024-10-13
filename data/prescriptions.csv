@@ -1,0 +1,6 @@
+prescriptionId,patientId,doctorId,medicineIds,dosages,amounts,frequency,startDate,endDate,notes,totalPrice
+P001,PAT001,DOC001,"[MED001,MED002]","[10mg,5ml]","[1,2]",Twice daily,2023-05-01,2023-05-07,Take with food,150.50,
+P002,PAT002,DOC002,"[MED002,MED003]","[5ml,1 tablet]","[2,1]",Once daily,2023-05-02,2023-05-09,Take before bedtime,75.25,
+P003,PAT003,DOC003,"[MED003,MED004,MED005]","[1 tablet,2 capsules,1 spray]","[1,2,3]",Three times daily,2023-05-03,2023-05-10,Take after meals,200.75,
+P004,PAT001,DOC002,"[MED004,MED001]","[2 capsules,10mg]","[2,1]",Once daily,2023-05-04,2023-05-18,Take with water,180.00,
+P005,PAT004,DOC001,"[MED005,MED002,MED003]","[1 spray,5ml,1 tablet]","[2,1,1]",As needed,2023-05-05,2023-05-20,Use as directed,95.60,

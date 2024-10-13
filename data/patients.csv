@@ -1,3 +1,4 @@
+patient_id,patient_name,patient_birthday,patient_address,patient_NIC,patient_contact_no,patient_blood_type,patient_allergies,patient_diseases,patient_weight,patient_height
 PT001,Angela White,1985-11-04,"123 Fame St, Los Angeles, CA",NIC001,555-0101,O+,Peanuts,Diabetes,63.5,163
 PT002,Rocco Siffredi,1964-05-04,"456 Star Ave, Las Vegas, NV",NIC002,555-0102,O-,None,High Blood Pressure,86.2,183
 PT003,Sasha Grey,1988-03-14,"789 Celebrity Blvd, New York, NY",NIC003,555-0103,A+,Penicillin,Asthma,56.7,168
